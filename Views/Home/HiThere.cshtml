@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .redText{
+        color: red;
+    }
+</style>
+<body>
+    <h1>Hello from Views!</h1>
+
+    @{
+    var StringList = new List<string>
+    {
+        "Apple Pie",
+        "Burritos",
+        "Clams Casino",
+        "Donuts"
+    };
+        
+    foreach(string word in StringList)
+    {
+        <div>
+            @if(word[0] == 'C')
+            {
+                 <p class="redText">@word</p>
+            }
+            else
+            {
+            <p>@word</p>
+            }
+       </div>
+    }
+}
+</body>
+</html>
